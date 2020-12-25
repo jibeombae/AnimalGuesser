@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimalGuesser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ePZ-zU-Y09">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BH7-aD-tsi" userLabel="QuestionLabel">
+                                <rect key="frame" x="0.0" y="212" width="320" height="36"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANIMAL GUESSER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljN-D5-VoB" userLabel="TitleLabel">
+                                <rect key="frame" x="42.5" y="50" width="235" height="28"/>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="oYg-Xy-Dia">
+                                <rect key="frame" x="35" y="377" width="250" height="53"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FkE-mq-xy7" userLabel="YesButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="2aF-zI-8PI"/>
+                                            <constraint firstAttribute="height" constant="53" id="fcl-Iy-alD"/>
+                                        </constraints>
+                                        <state key="normal" image="yesButton">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="yesTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jVO-CV-Ahn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8E-2N-4ni" userLabel="NoButton">
+                                        <rect key="frame" x="150" y="0.0" width="100" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="CB5-ry-5wD"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="noButton">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="noTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J6I-NK-N8D"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRP-lL-Vj0" userLabel="RestartButton">
+                                <rect key="frame" x="110" y="374" width="100" height="56"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="38V-ZR-W6N"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="HYV-jd-fQZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                <state key="normal" title="RESTART">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yYz-5c-kSd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TRP-lL-Vj0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="65o-0g-hnw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TRP-lL-Vj0" secondAttribute="bottom" constant="50" id="BAn-NT-2d5"/>
+                            <constraint firstItem="ePZ-zU-Y09" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qpy-RV-R7G"/>
+                            <constraint firstItem="ljN-D5-VoB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qv0-Bc-WX1"/>
+                            <constraint firstItem="BH7-aD-tsi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-10" id="REu-4s-f5L"/>
+                            <constraint firstItem="ljN-D5-VoB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="dof-ry-bl0"/>
+                            <constraint firstItem="oYg-Xy-Dia" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g6G-Pt-eYl"/>
+                            <constraint firstItem="ePZ-zU-Y09" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nQk-Vb-XTD"/>
+                            <constraint firstItem="BH7-aD-tsi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pKe-nh-uFH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oYg-Xy-Dia" secondAttribute="bottom" constant="50" id="r28-gY-BrE"/>
+                            <constraint firstAttribute="trailing" secondItem="ePZ-zU-Y09" secondAttribute="trailing" id="rL4-Lp-RdH"/>
+                            <constraint firstAttribute="bottom" secondItem="ePZ-zU-Y09" secondAttribute="bottom" id="umx-yy-qaQ"/>
+                            <constraint firstItem="BH7-aD-tsi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zVk-6p-iWp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="QuestionLabel" destination="BH7-aD-tsi" id="ptN-Do-KH9"/>
+                        <outlet property="noButton" destination="V8E-2N-4ni" id="TCa-lx-XLv"/>
+                        <outlet property="restartButton" destination="TRP-lL-Vj0" id="qO4-Mj-dB9"/>
+                        <outlet property="yesButton" destination="FkE-mq-xy7" id="kNq-zx-KJ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="400" height="400"/>
+        <image name="noButton" width="400" height="213"/>
+        <image name="yesButton" width="400" height="213"/>
+    </resources>
+</document>
